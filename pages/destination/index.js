@@ -6,6 +6,8 @@ import Bread from './bread';
 import Des2 from './mars';
 import Des3 from './europa';
 import Des4 from './Ttitan';
+import Des5 from './planetX';
+import Des6 from './jupyter';
 import Des7 from './venus';
 import Des8 from './saturn';
 import Des9 from './neptun';
@@ -24,6 +26,8 @@ export default class Home extends React.Component  {
     this.handleClick2 = this.handleClick2.bind(this);
     this.handleClick3 = this.handleClick3.bind(this);
     this.handleClick4 = this.handleClick4.bind(this);
+    this.handleClick5 = this.handleClick5.bind(this);
+    this.handleClick6 = this.handleClick6.bind(this);
     this.handleClick7 = this.handleClick7.bind(this);
     this.handleClick8 = this.handleClick8.bind(this);
     this.handleClick9 = this.handleClick9.bind(this);
@@ -46,6 +50,15 @@ export default class Home extends React.Component  {
     this.setState({ 
       component : < Des4 />
    })}
+   handleClick5() {
+    this.setState({ 
+      component : < Des5 />
+   })}
+   handleClick6() {
+    this.setState({ 
+      component : < Des6 />
+   })}
+
    handleClick7() {
     this.setState({ 
       component : < Des7 />
@@ -81,6 +94,8 @@ export default class Home extends React.Component  {
                   <button onClick={this.handleClick7}>VENUS</button>
                   <button onClick={this.handleClick8}>SATURN</button>
                   <button onClick={this.handleClick9}>NEPTUN</button>
+                  <button onClick={this.handleClick5}>PLANETX</button>
+                  <button onClick={this.handleClick6}>JUPITER</button>
               </div>
               <div>
                    {this.state.component}
