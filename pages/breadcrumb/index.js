@@ -17,13 +17,16 @@ function close() {
     document.getElementById("close").style.display = "none"
     
 }
+const handleClick = () => {
+    window.location.href = 'http://localhost:3006/food-menu-react';
+  };
 
     return (
         <>
          <div className={styles.bread}>
             
             <div>
-                <img src="/shared/logo.svg" alt="Logo" ></img>
+                <img src="/shared/logo.svg" alt="Logo" onClick={handleClick}></img>
             </div>
             <div className={styles.line}></div>
             <div id='bread' className={styles.breadp}>

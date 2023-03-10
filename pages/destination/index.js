@@ -6,6 +6,10 @@ import Bread from './bread';
 import Des2 from './mars';
 import Des3 from './europa';
 import Des4 from './Ttitan';
+import Des7 from './venus';
+import Des8 from './saturn';
+import Des9 from './neptun';
+
 
 export default class Home extends React.Component  {
   constructor(props) {
@@ -20,6 +24,9 @@ export default class Home extends React.Component  {
     this.handleClick2 = this.handleClick2.bind(this);
     this.handleClick3 = this.handleClick3.bind(this);
     this.handleClick4 = this.handleClick4.bind(this);
+    this.handleClick7 = this.handleClick7.bind(this);
+    this.handleClick8 = this.handleClick8.bind(this);
+    this.handleClick9 = this.handleClick9.bind(this);
   };
   handleClick() {
     this.setState({ 
@@ -38,6 +45,18 @@ export default class Home extends React.Component  {
    handleClick4() {
     this.setState({ 
       component : < Des4 />
+   })}
+   handleClick7() {
+    this.setState({ 
+      component : < Des7 />
+   })}
+   handleClick8() {
+    this.setState({ 
+      component : < Des8 />
+   })}
+   handleClick9() {
+    this.setState({ 
+      component : < Des9 />
    })}
   
   render() {
@@ -59,6 +78,9 @@ export default class Home extends React.Component  {
                   <button onClick={this.handleClick2}>MARS</button>
                   <button onClick={this.handleClick3}>EUROPA</button>
                   <button onClick={this.handleClick4}>TITAN</button>
+                  <button onClick={this.handleClick7}>VENUS</button>
+                  <button onClick={this.handleClick8}>SATURN</button>
+                  <button onClick={this.handleClick9}>NEPTUN</button>
               </div>
               <div>
                    {this.state.component}
